@@ -48,8 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'django.middleware.security.SecurityMiddleware'
 ]
 
 ROOT_URLCONF = 'myblog.urls'
@@ -125,3 +124,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
